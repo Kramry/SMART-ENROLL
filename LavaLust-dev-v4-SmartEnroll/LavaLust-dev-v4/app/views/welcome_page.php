@@ -40,7 +40,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             overflow-x: hidden;
         }
 
-        /* ── NOISE TEXTURE ── */
         body::before {
             content: '';
             position: fixed;
@@ -51,7 +50,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             opacity: 0.6;
         }
 
-        /* ── GRID BACKGROUND ── */
         body::after {
             content: '';
             position: fixed;
@@ -65,7 +63,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 100%);
         }
 
-        /* ── GLOW ORBS ── */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -84,7 +81,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             background: radial-gradient(circle, rgba(221,72,20,0.07) 0%, transparent 70%);
         }
 
-        /* ── LAYOUT ── */
         .wrap {
             position: relative;
             z-index: 1;
@@ -93,7 +89,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             padding: 0 2rem;
         }
 
-        /* ── NAV ── */
         nav {
             position: relative;
             z-index: 10;
@@ -166,7 +161,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             box-shadow: 0 0 20px var(--lava-glow-strong);
         }
 
-        /* ── HERO ── */
         .hero {
             padding: 7rem 2rem 5rem;
             text-align: center;
@@ -275,7 +269,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             background: var(--bg3);
         }
 
-        /* ── STAT BAR ── */
         .stats {
             display: flex;
             justify-content: center;
@@ -309,7 +302,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             letter-spacing: 0.06em;
         }
 
-        /* ── SECTION ── */
         section {
             padding: 5rem 2rem;
             position: relative;
@@ -341,7 +333,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             max-width: 480px;
         }
 
-        /* ── FEATURES GRID ── */
         .features-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -408,7 +399,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             line-height: 1.6;
         }
 
-        /* ── CODE SECTION ── */
         .code-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -460,7 +450,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         .code-body .cl { color: #fde68a; }
         .code-body .var { color: #c4b5fd; }
 
-        /* ── STRUCTURE ── */
         .structure-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -510,7 +499,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
         .dir-item:hover .dir-icon svg { opacity: 1; }
 
-        /* ── FOOTER ── */
         footer {
             border-top: 1px solid var(--border);
             padding: 2rem;
@@ -553,7 +541,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
         .footer-links a:hover { color: var(--lava); }
 
-        /* ── DIVIDER ── */
         .divider {
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--border), transparent);
@@ -562,7 +549,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             z-index: 1;
         }
 
-        /* ── ANIMATIONS ── */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(24px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -591,11 +577,9 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 
-<!-- NAV -->
 <nav>
     <a class="nav-logo" href="#">
         <div class="flame">
-            <!-- Flame SVG -->
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 21C12 21 5 17 5 11C5 8 7.5 5.5 10 5.5C10 5.5 9 8 11 9C11 9 10 6.5 13.5 5C13.5 5 12.5 9 15.5 9C17.5 9 18.5 7 18.5 7C18.5 7 21 9.5 19 14C17.5 17.5 12 21 12 21Z" fill="white" opacity="0.95"/>
             </svg>
@@ -609,7 +593,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
     </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero wrap">
     <div class="badge">v<?php echo config_item('VERSION') ?? '4.x'; ?> — Now Available</div>
     <h1>
@@ -628,7 +611,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
     </div>
 </div>
 
-<!-- STATS -->
 <div class="stats">
     <div class="stat">
         <div class="stat-value">MVC<span>+</span></div>
@@ -650,7 +632,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
 <div class="divider"></div>
 
-<!-- FEATURES -->
 <section>
     <div class="wrap">
         <div class="section-label">// features</div>
@@ -658,8 +639,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         <p class="section-desc">LavaLust gives you a clean, consistent structure so you can focus on building — not configuring.</p>
 
         <div class="features-layout">
-
-            <!-- MVC -->
             <div class="feature">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="5" rx="1"/><rect x="2" y="10" width="9" height="5" rx="1"/><rect x="2" y="17" width="9" height="4" rx="1"/><path d="M15 12h7M15 17h7M19 10v10"/></svg>
@@ -667,8 +646,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
                 <h3>MVC Architecture</h3>
                 <p>Clean separation between Models, Views, and Controllers keeps your codebase maintainable as it grows.</p>
             </div>
-
-            <!-- Routing -->
             <div class="feature">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 6h10M14 8l4 8M10 8L6 16"/></svg>
@@ -676,8 +653,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
                 <h3>Flexible Routing</h3>
                 <p>Define routes with GET, POST, PUT, DELETE and more. Supports named routes, closures, and grouped prefixes.</p>
             </div>
-
-            <!-- ORM -->
             <div class="feature">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v4c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 9v5c0 1.66 4 3 9 3s9-1.34 9-3V9"/><path d="M3 14v5c0 1.66 4 3 9 3s9-1.34 9-3v-5"/></svg>
@@ -685,8 +660,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
                 <h3>ORM-style Models</h3>
                 <p>Fluent query builder with relationships, soft deletes, timestamps, mass assignment protection, and eager loading.</p>
             </div>
-
-            <!-- HMVC -->
             <div class="feature">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24"><rect x="2" y="2" width="8" height="8" rx="1.5"/><rect x="14" y="2" width="8" height="8" rx="1.5"/><rect x="2" y="14" width="8" height="8" rx="1.5"/><rect x="14" y="14" width="8" height="8" rx="1.5"/></svg>
@@ -694,8 +667,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
                 <h3>HMVC Modules</h3>
                 <p>Scale your app with self-contained modules. Each module owns its controllers, models, and views.</p>
             </div>
-
-            <!-- REST -->
             <div class="feature">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24"><path d="M4 12h16M12 4l8 8-8 8"/></svg>
@@ -703,8 +674,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
                 <h3>REST API Support</h3>
                 <p>Build JSON APIs out of the box using built-in conventions, response helpers, and content negotiation.</p>
             </div>
-
-            <!-- Libraries -->
             <div class="feature">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24"><path d="M4 19V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v13"/><path d="M4 19a2 2 0 0 0 2 2h13a1 1 0 0 0 1-1v-1"/><path d="M8 7h6M8 11h8"/></svg>
@@ -712,14 +681,12 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
                 <h3>Libraries &amp; Helpers</h3>
                 <p>Sessions, form validation, file uploads, pagination, encryption — batteries included where it counts.</p>
             </div>
-
         </div>
     </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CODE EXAMPLE -->
 <section>
     <div class="wrap">
         <div class="code-section">
@@ -768,7 +735,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
 <div class="divider"></div>
 
-<!-- STRUCTURE -->
 <section>
     <div class="wrap">
         <div class="section-label">// project structure</div>
@@ -777,7 +743,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
         <div class="structure-grid">
             <?php
-            // Each entry: [path, SVG path data (viewBox 0 0 24 24, stroke only)]
             $dirs = [
                 ['app/config',      '<path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'],
                 ['app/controllers', '<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>'],
@@ -806,7 +771,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <div class="footer-inner">
         <div class="footer-meta">
